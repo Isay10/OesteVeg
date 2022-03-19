@@ -1,0 +1,15 @@
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 20px;
+  padding: 0.35em;
+  height: 1em;
+  width: 1em;
+}
+
+.quantity-number {
+  color: turquoise;
+  font-weight: bold;
+}

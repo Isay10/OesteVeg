@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button } from "@mui/material";
-import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
+import CartWidget from "./CartWidget";
 
 import "./NavBar.css";
 
@@ -22,9 +22,7 @@ export default function NavBar() {
             <Button variant="text">Dulce</Button>
           </li>
           <li className="nav-li">
-            <Button variant="text">
-              <LocalGroceryStoreIcon style={{ color: "black" }} />
-            </Button>
+            <CartWidget quantity={5} />
           </li>
         </div>
       </ul>
