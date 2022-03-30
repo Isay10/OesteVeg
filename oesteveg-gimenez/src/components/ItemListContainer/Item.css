@@ -1,0 +1,17 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 17vw;
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+.product-card__image {
+  height: 40vh;
+  width: 100%;
+}
+.product-card__name {
+  font-size: 1.6rem;
+}

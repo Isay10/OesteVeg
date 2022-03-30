@@ -1,7 +1,6 @@
-import * as React from "react";
 import { Button } from "@mui/material";
+import * as React from "react";
 import CartWidget from "./CartWidget";
-
 import "./NavBar.css";
 
 export default function NavBar() {
