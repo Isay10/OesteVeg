@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { productList } from "../../mockItem.js";
-import Item from "./Item";
+import { productList } from "../../services/product.services/mock.service.products.js";
+import Item from "../Item/Item";
 import "./ItemList.css";
 
 const ItemList = () => {

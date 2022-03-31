@@ -1,0 +1,32 @@
+.detail-list-container {
+  display: flex;
+  height: 85%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 5%;
+}
+
+.detail-list-description-container {
+  flex-direction: column;
+  width: 40%;
+}
+
+.detail-card__image {
+  height: 50%;
+  width: 20vw;
+  margin: 0;
+}
+
+.detail-description-text {
+  font-size:1.3em;
+}
+
+.detail-list-information-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+}
+
