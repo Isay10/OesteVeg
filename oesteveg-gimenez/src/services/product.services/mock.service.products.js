@@ -10,7 +10,7 @@ export const productList = [
     name: "Pizza de Muzzalmendra",
     price: 350,
     image: "https://dummyimage.com/200x200/000/ffffff&text=Pizza",
-    stock: 10,
+    stock: 0,
     id: 2,
   },
   {
