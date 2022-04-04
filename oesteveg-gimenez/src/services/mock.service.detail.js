@@ -1,4 +1,4 @@
-export const productList = [
+export const detailProduct = [
   {
     name: "Medallon de verdura x6",
     price: 200,
