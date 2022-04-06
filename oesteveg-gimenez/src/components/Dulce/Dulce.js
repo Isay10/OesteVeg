@@ -1,7 +1,9 @@
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import { useParams } from "react-router-dom";
 
 const Dulce = () => {
-  return <ItemListContainer type={"dulce"} />;
+  const { type } = useParams();
+  return <ItemListContainer type={type} />;
 };
 
 export default Dulce;

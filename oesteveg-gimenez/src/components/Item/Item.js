@@ -1,8 +1,8 @@
 import React from "react";
-import "./Item.css";
+import { Link, useParams } from "react-router-dom";
 import { onAdd } from "../../Common/commonMethods.js";
 import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
+import "./Item.css";
 
 const Item = ({ name, image, price, stock, id }) => {
   return (

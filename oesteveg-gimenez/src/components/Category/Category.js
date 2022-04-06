@@ -1,19 +1,20 @@
 import { Button } from "@mui/material";
-import { Link, useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-export default function Category({ type }) {
+export default function Category() {
   return (
     <>
       <h1>Categorias</h1>
       <div>
-        <Link to={`/category/${type[0]}`}>
+        <Link to={`/category/dulce`}>
           <Button variant="text">Dulce</Button>
         </Link>{" "}
       </div>
       <div>
         {" "}
-        <Link to={`/category/${type[1]}`}>
+        <Link to={`/category/salado`}>
           <Button variant="text">Salado</Button>
         </Link>
       </div>

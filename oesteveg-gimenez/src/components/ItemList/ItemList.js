@@ -3,9 +3,9 @@ import { productList } from "../../services/mock.service.products.js";
 import Item from "../Item/Item";
 import "./ItemList.css";
 
-const ItemList = ({ type }) => {
+const ItemList = ({ param }) => {
   const [products, setProducts] = useState([]);
-  console.log(products);
+  /*  console.log("PAPAPAPA: " + JSON.stringify(props)); */
 
   const getProducts = new Promise((res, rej) => {
     setTimeout(() => {
@@ -16,12 +16,7 @@ const ItemList = ({ type }) => {
   const getProductsData = async () => {
     try {
       const result = await getProducts;
-      /*  const test = () => {
-        result.filter((product) => product.type);
-      };
-      test(); */
       setProducts(result);
-      /*  console.log(test()); */
     } catch (error) {
       console.log(error);
       alert("No podemos mostrar los productos en este momento");
@@ -36,9 +31,9 @@ const ItemList = ({ type }) => {
     <div className="product-list-container">
       {
         <>
-          {type &&
+          {param &&
             products
-              .filter((product) => product.type === type)
+              .filter((product) => product.type === param)
               .map((product) => {
                 return (
                   <div key={product.id}>
@@ -52,7 +47,7 @@ const ItemList = ({ type }) => {
                   </div>
                 );
               })}
-          {!type &&
+          {!param &&
             products.map((product) => {
               return (
                 <div key={product.id}>

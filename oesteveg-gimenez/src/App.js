@@ -8,6 +8,7 @@ import QuienesSomos from "./components/QuienesSomos/QuienesSomos";
 import Category from "./components/Category/Category";
 import Dulce from "./components/Dulce/Dulce";
 import Salado from "./components/Salado/Salado";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
@@ -16,16 +17,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/" element={<Home />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/quienes-somos" element={<QuienesSomos />} />
-          <Route
-            path="/category"
-            element={<Category type={["dulce", "salado"]} />}
-          />
-          <Route path="category/dulce" element={<Dulce />} />
-          <Route path="category/salado" element={<Salado />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="category/:type" element={<Dulce />} />
+          <Route path="category/:type" element={<Salado />} />
         </Routes>
       </Router>
     </div>
