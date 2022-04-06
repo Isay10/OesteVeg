@@ -35,13 +35,18 @@
   color: #ffa0e4 !important;
 }
 
-/* Para cuando se use la navegacion */
-/* .active {
-  color: rgb(5, 255, 251);
+
+ .active {
+   border: 1px solid  #ffa0e4 !important;
+  font-weight: bold;
+  font-size: 23px;
+}
+ .activeHome {
+   color: #ffa0e4 !important;
   font-weight: bold;
   font-size: 23px;
 }
 
 .inactive {
   color: white;
-} */
+} 

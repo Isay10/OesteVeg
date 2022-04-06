@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { productList } from "../../services/product.services/mock.service.products.js";
+import { productList } from "../../services/mock.service.products.js";
 import Item from "../Item/Item";
 import "./ItemList.css";
 
-const ItemList = () => {
+const ItemList = ({ param }) => {
   const [products, setProducts] = useState([]);
+  /*  console.log("PAPAPAPA: " + JSON.stringify(props)); */
 
   const getProducts = new Promise((res, rej) => {
     setTimeout(() => {
@@ -30,19 +31,36 @@ const ItemList = () => {
     <div className="product-list-container">
       {
         <>
-          {products.map((product) => {
-            return (
-              <div key={product.id}>
-                <Item
-                  name={product.name}
-                  image={product.image}
-                  price={product.price}
-                  stock={product.stock}
-                  id={product.id}
-                />
-              </div>
-            );
-          })}
+          {param &&
+            products
+              .filter((product) => product.type === param)
+              .map((product) => {
+                return (
+                  <div key={product.id}>
+                    <Item
+                      name={product.name}
+                      image={product.image}
+                      price={product.price}
+                      stock={product.stock}
+                      id={product.id}
+                    />
+                  </div>
+                );
+              })}
+          {!param &&
+            products.map((product) => {
+              return (
+                <div key={product.id}>
+                  <Item
+                    name={product.name}
+                    image={product.image}
+                    price={product.price}
+                    stock={product.stock}
+                    id={product.id}
+                  />
+                </div>
+              );
+            })}
         </>
       }
     </div>
