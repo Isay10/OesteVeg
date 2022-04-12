@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Category from "./components/Category/Category";
+import Dulce from "./components/Dulce/Dulce";
+import Home from "./components/Home/Home";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./components/NotFound/NotFound";
 import QuienesSomos from "./components/QuienesSomos/QuienesSomos";
-import Category from "./components/Category/Category";
-import Dulce from "./components/Dulce/Dulce";
 import Salado from "./components/Salado/Salado";
-import Home from "./components/Home/Home";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="category/:type" element={<Dulce />} />
           <Route path="category/:type" element={<Salado />} />
+          <Route path="cart" element={<Cart />} />
         </Routes>
       </Router>
     </div>
